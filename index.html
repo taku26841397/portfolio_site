@@ -8,8 +8,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" href="">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
-	<meta name="description"
-		content="Development Archive">
+	<meta name="description" content="Development Archive">
 	<meta name="viewport" content="width=device-width">
 </head>
 
@@ -35,11 +34,16 @@
 	</header>
 	<main>
 		<div id="mainvisual">
-			<h2>Development<br>Archive</h2>
+			<h2 id="titleText">
+				<span class="line">Development</span>
+				<span class="line">Archive</span>
+			</h2>
+
 		</div>
+
 		<div id="top_contents">
 
-			<section id="menu">
+			<section id="menu" class="fadein">
 				<h2>ABOUT</h2>
 				<p>PythonとWEBサイトを中心に開発を学習しています。<br>
 					個人制作では、静的サイトやCRUDアプリなどを通じて設計・実装・デプロイまでの流れを経験しました。<br>
@@ -54,7 +58,7 @@
 				<h2>INFO</h2>
 				<p>作成過程の最新情報を紹介しています。</p>
 				<div id="info_card">
-					<a class="card" href="https://todo-1lnw.onrender.com/" target="_blank">
+					<a class="card" href="project.html#todo" target="_blank">
 						<div class="card_img">
 							<img src="image/info_todo.png" alt="Todoの画像">
 						</div>
@@ -85,9 +89,9 @@
 							<p class="card_cont_summary">今まで読了した本を随時更新しています。</p>
 						</div>
 					</a>
-					
-					
-					
+
+
+
 				</div>
 			</section>
 		</div>
@@ -96,13 +100,107 @@
 		<div id="footer_inner">
 			<address>
 				<h3>Development Archive</h3>
-					■TEL：080-3193-7168<br>
-					■Mail：taku26841397@gmail.com<br>
-				</p>	
+				■TEL：080-3193-7168<br>
+				■Mail：taku26841397@gmail.com<br>
+				</p>
 			</address>
 			<p id="copyright"><small>&copy; 2026 Development Archive</small></p>
 		</div>
 	</footer>
+	<script>
+		window.addEventListener("scroll", () => {
+			const header = document.querySelector("header");
+			if (window.scrollY > 50) {
+				header.classList.add("scrolled");
+			} else {
+				header.classList.remove("scrolled");
+			}
+		});
+
+		document.addEventListener("scroll", () => {
+			document.querySelectorAll(".fadein").forEach(el => {
+				const rect = el.getBoundingClientRect().top;
+				if (rect < window.innerHeight - 100) {
+					el.classList.add("show");
+				}
+			});
+		});
+
+
+
+
+
+
+		window.addEventListener("DOMContentLoaded", () => {
+			const lines = document.querySelectorAll("#titleText .line");
+			let index = 0;
+
+			lines.forEach(line => {
+				const text = line.textContent;
+				line.textContent = ""; // 一旦空にする
+
+				text.split("").forEach((char, i) => {
+					const span = document.createElement("span");
+					span.textContent = char;
+					span.classList.add("char");
+					line.appendChild(span);
+
+					setTimeout(() => {
+						span.classList.add("show");
+					}, index * 80);
+					index++;
+				});
+			});
+		});
+
+
+
+
+		
+const slideImages = [
+  "image/27466661_m.jpg",
+  "image/coffee_news_event2.jpg",
+  "image/info_cafe.jpg"
+];
+
+window.addEventListener("DOMContentLoaded", () => {
+  const h2 = document.querySelector("#mainvisual h2");
+
+  let layerA = document.createElement("div");
+  let layerB = document.createElement("div");
+
+  layerA.className = "bg-layer show";
+  layerB.className = "bg-layer";
+
+  h2.appendChild(layerA);
+  h2.appendChild(layerB);
+
+  let current = 0;
+  layerA.style.backgroundImage = `url(${slideImages[current]})`;
+
+  setInterval(() => {
+    current = (current + 1) % slideImages.length;
+
+    layerB.style.backgroundImage = `url(${slideImages[current]})`;
+
+    layerB.classList.add("show");
+    layerA.classList.remove("show");
+
+    const temp = layerA;
+    layerA = layerB;
+    layerB = temp;
+
+  }, 5000);
+});
+
+
+
+
+
+
+
+	</script>
+
 </body>
 
 </html>
