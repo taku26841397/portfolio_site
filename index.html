@@ -6,7 +6,7 @@
 	<title>Development Archive</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="icon" href="">
+	<link rel="icon" href="favicon.ico">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
 	<meta name="description" content="Development Archive">
 	<meta name="viewport" content="width=device-width">
@@ -15,20 +15,21 @@
 <body>
 	<header>
 		<div id="header_area">
-			<h1><a href="index.html"><img src="image/logo_port3.png" alt="Development Archive"></a></h1>
+			<h1><a href="index.html"><img src="image/logo.png" class="spin" alt=""></a></h1>
 			<nav>
 				<input id="sp_gnavi_check" type="checkbox">
 				<label id="sp_gnavi_btn" for="sp_gnavi_check">
 					<span></span></label>
 				<div id="gnavi">
 					<ul>
-						<li><a href="index.html">TOP</a></li>
-						<li><a href="skill.html">スキル</a></li>
-						<li><a href="project.html">作品一覧</a></li>
-
-						<li><a href="contact.html">お問い合わせ</a></li>
+						<li><a class="now" href="index.html">Home</a></li>
+						<li><a href="skill.html">Skills</a></li>
+						<li><a href="project.html">Project</a></li>
+						<li><a href="contact.html">Contact</a></li>
 					</ul>
+
 				</div>
+				<a class="cta-btn" href="contact.html">Get Proposal</a>
 			</nav>
 		</div>
 	</header>
@@ -37,27 +38,139 @@
 			<h2 id="titleText">
 				<span class="line">Development</span>
 				<span class="line">Archive</span>
+				<p id="subtitle">Web Engineer / Frontend & Backend</p>
 			</h2>
 
 		</div>
 
 		<div id="top_contents">
 
-			<section id="menu" class="fadein">
-				<h2>ABOUT</h2>
-				<p>PythonとWEBサイトを中心に開発を学習しています。<br>
-					個人制作では、静的サイトやCRUDアプリなどを通じて設計・実装・デプロイまでの流れを経験しました。<br>
-					現在は開発実績を整理し、より実務的なアプローチを追求中です。</p>
-				<h2>経歴</h2>
-				<p>2023年、EXCELのVBAで初めてプログラミングに触れる。<br>
-					その後、転職し、Palantir Foundry​で、自動車工場の課題解決アプリ作成を経験<br>
-					（Python / TypeScript を使用）<br>
-					最近（2026/2）までは、職業訓練校に通いWEBサイト作成を学ぶ</p>
+			<section id="menu">
+				<!-- <h2>ABOUT</h2> -->
+				<h2 id="about-title"></h2>
+
+
+				<p>
+					Python を中心としたバックエンド開発と Web サイト制作を軸に、日々学習を積み重ねています。<br>
+					静的サイトの制作では、HTML / CSS / JavaScript を用いた UI 実装を通じて Web の基礎を固めました。<br><br>
+					さらに CRUD アプリの開発では、データベース設計、API の構築、フロントとのデータ連携、デプロイまでを一通り経験し、<br>
+					アプリケーションがどのように動き、どのように価値を届けるのかを実践的に理解しました。<br><br>
+					現在は制作物の整理や改善を進めながら、より実務に近い開発プロセスや設計手法を取り入れ、
+					長く使われるプロダクトを意識した開発を目指しています。
+				</p>
+
+				<a class="readmore-btn" href="skill.html">Read More →</a>
+
+				<!-- <h2>経歴</h2> -->
+				<h2 id="career-title"></h2>
+
+				<p>
+					2023年、EXCEL VBA をきっかけにプログラミングに触れ、コードを書く楽しさを知りました。<br><br>
+					その後の転職では、Palantir Foundry を用いた自動車工場向けの課題解決アプリ開発に携わり、<br>
+					Python や TypeScript を使ったデータ連携・業務改善の実装を経験しました。<br><br>
+					2026年には職業訓練校にて Web サイト制作を体系的に学び、静的サイト構築から Django を用いたアプリ開発まで幅広く習得しました。<br>
+					現在はバックエンドとフロントエンドの両方を扱えるエンジニアとして、より高度なアプリケーション開発に挑戦しています。
+				</p>
 			</section>
+
+
+			<section id="works_slider">
+				<h2>PICK UP PROJECT</h2>
+				<div class="slider-wrap">
+					<div class="slider">
+						<div class="slide">
+							<div class="slide_img_wrap">
+								<a href="project.html#hondana">
+									<img src="image/hondana_picture.jpg" alt="">
+
+									<!-- ホバーでタイトル＋説明を表示 -->
+									<div class="slide_overlay">
+										<h3 class="overlay_title">本棚アプリ</h3>
+										<p class="overlay_desc">本棚アプリを作成しました。</p>
+									</div>
+								</a>
+							</div>
+
+							<!-- カテゴリ（常時表示） -->
+							<p class="slide_category">Django</p>
+						</div>
+
+
+						<div class="slide">
+							<div class="slide_img_wrap">
+								<a href="project.html#ryokan">
+									<img src="image/ryokan_picture.png" alt="">
+
+									<!-- ホバーでタイトル＋説明を表示 -->
+									<div class="slide_overlay">
+										<h3 class="overlay_title">旅館サイト</h3>
+										<p class="overlay_desc">架空の旅館サイトを作成しました。</p>
+									</div>
+								</a>
+							</div>
+
+							<!-- カテゴリ（常時表示） -->
+							<p class="slide_category">HTML/CSS</p>
+						</div>
+
+						<div class="slide">
+							<div class="slide_img_wrap">
+								<a href="project.html#cafe"><img src="image/coffee_shop.jpg" alt="">
+
+									<!-- ホバーでタイトル＋説明を表示 -->
+									<div class="slide_overlay">
+										<h3 class="overlay_title">カフェサイト</h3>
+										<p class="overlay_desc">架空のカフェサイトを作成しました。</p>
+									</div>
+								</a>
+							</div>
+
+							<!-- カテゴリ（常時表示） -->
+							<p class="slide_category">HTML/CSS</p>
+						</div>
+
+						<div class="slide">
+							<div class="slide_img_wrap">
+								<a href="project.html#todo">
+									<img src="image/todo.jpg" alt="">
+
+									<!-- ホバーでタイトル＋説明を表示 -->
+									<div class="slide_overlay">
+										<h3 class="overlay_title">Todoアプリ作成</h3>
+										<p class="overlay_desc">タスク管理アプリを作成しました。</p>
+									</div>
+								</a>
+							</div>
+
+							<!-- カテゴリ（常時表示） -->
+							<p class="slide_category">Django</p>
+						</div>
+
+
+
+						<!-- 作品を増やす場合はこのブロックを複製 -->
+					</div>
+				</div>
+			</section>
+
+
+
+
 			<section id="info">
 				<h2>INFO</h2>
 				<p>作成過程の最新情報を紹介しています。</p>
 				<div id="info_card">
+					<a class="card" href="" target="_blank">
+						<div class="card_img">
+							<img src="image/top_img.png" alt="Todoの画像">
+						</div>
+						<div class="card_cont">
+							<h3>サイトのデザイン変更</h3>
+							<p class="card_cont_day">2026年7月30日</p>
+							<p class="card_cont_summary">サイトのデザインを一部変更しました</p>
+						</div>
+					</a>
+
 					<a class="card" href="project.html#todo" target="_blank">
 						<div class="card_img">
 							<img src="image/info_todo.png" alt="Todoの画像">
@@ -96,6 +209,10 @@
 			</section>
 		</div>
 	</main>
+	<a href="#" id="pagetop">
+		<div id="pagetop_inner"></div>
+	</a>
+
 	<footer>
 		<div id="footer_inner">
 			<address>
@@ -108,6 +225,54 @@
 		</div>
 	</footer>
 	<script>
+
+
+
+
+
+		document.addEventListener("DOMContentLoaded", () => {
+
+			// 汎用タイピング関数
+			const typingEffect = (elementId, text) => {
+				const target = document.getElementById(elementId);
+				let index = 0;
+				let started = false;
+
+				const typing = () => {
+					if (index <= text.length) {
+						target.textContent = text.slice(0, index);
+						index++;
+						setTimeout(typing, 120); // ← タイピング速度
+					}
+				};
+
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting && !started) {
+							started = true;
+							typing();
+						}
+					});
+				});
+
+				observer.observe(target);
+			};
+
+			// ABOUT
+			typingEffect("about-title", "ABOUT");
+
+			// 経歴
+			typingEffect("career-title", "Career");
+
+		});
+
+
+
+
+
+
+
+
 		window.addEventListener("scroll", () => {
 			const header = document.querySelector("header");
 			if (window.scrollY > 50) {
@@ -154,48 +319,122 @@
 		});
 
 
-
-
-		
-const slideImages = [
-  "image/27466661_m.jpg",
-  "image/coffee_news_event2.jpg",
-  "image/info_cafe.jpg"
-];
-
-window.addEventListener("DOMContentLoaded", () => {
-  const h2 = document.querySelector("#mainvisual h2");
-
-  let layerA = document.createElement("div");
-  let layerB = document.createElement("div");
-
-  layerA.className = "bg-layer show";
-  layerB.className = "bg-layer";
-
-  h2.appendChild(layerA);
-  h2.appendChild(layerB);
-
-  let current = 0;
-  layerA.style.backgroundImage = `url(${slideImages[current]})`;
-
-  setInterval(() => {
-    current = (current + 1) % slideImages.length;
-
-    layerB.style.backgroundImage = `url(${slideImages[current]})`;
-
-    layerB.classList.add("show");
-    layerA.classList.remove("show");
-
-    const temp = layerA;
-    layerA = layerB;
-    layerB = temp;
-
-  }, 5000);
-});
+		const slideImages = [
+			"image/27466661_m.jpg",
+			"image/coffee_news_event2.jpg",
+			"image/info_cafe.jpg"
+		];
 
 
 
 
+
+		window.addEventListener("DOMContentLoaded", () => {
+			const h2 = document.querySelector("#mainvisual h2");
+
+			let layerA = document.createElement("div");
+			let layerB = document.createElement("div");
+
+			layerA.className = "bg-layer show";
+			layerB.className = "bg-layer";
+
+			h2.appendChild(layerA);
+			h2.appendChild(layerB);
+
+			let current = 0;
+			layerA.style.backgroundImage = `url(${slideImages[current]})`;
+
+			setInterval(() => {
+				current = (current + 1) % slideImages.length;
+
+				layerB.style.backgroundImage = `url(${slideImages[current]})`;
+
+				layerB.classList.add("show");
+				layerA.classList.remove("show");
+
+				const temp = layerA;
+				layerA = layerB;
+				layerB = temp;
+
+			}, 5000);
+		});
+
+
+
+
+
+		document.addEventListener("DOMContentLoaded", () => {
+			// タイトルの文字アニメーション
+			const lines = document.querySelectorAll("#titleText .line");
+			let index = 0;
+			lines.forEach(line => {
+				const text = line.textContent;
+				line.textContent = "";
+				text.split("").forEach(char => {
+					const span = document.createElement("span");
+					span.textContent = char;
+					span.classList.add("char");
+					line.appendChild(span);
+					setTimeout(() => {
+						span.classList.add("show");
+					}, index * 80);
+					index++;
+				});
+			});
+
+			// メインビジュアルの背景スライド
+			const slideImages = [
+				"image/27466661_m.jpg",
+				"image/coffee_news_event2.jpg",
+				"image/info_cafe.jpg"
+			];
+			const h2 = document.querySelector("#mainvisual h2");
+			let layerA = document.createElement("div");
+			let layerB = document.createElement("div");
+			layerA.className = "bg-layer show";
+			layerB.className = "bg-layer";
+			h2.appendChild(layerA);
+			h2.appendChild(layerB);
+			let current = 0;
+			layerA.style.backgroundImage = `url(${slideImages[current]})`;
+			setInterval(() => {
+				current = (current + 1) % slideImages.length;
+				layerB.style.backgroundImage = `url(${slideImages[current]})`;
+				layerB.classList.add("show");
+				layerA.classList.remove("show");
+				const temp = layerA;
+				layerA = layerB;
+				layerB = temp;
+			}, 5000);
+
+
+		});
+
+
+
+
+
+
+
+		document.addEventListener("DOMContentLoaded", () => {
+			const slider = document.querySelector(".slider");
+
+			// スライド複製（2セットにする）
+			slider.innerHTML += slider.innerHTML;
+
+			// 全スライドの幅を計算
+			const slides = slider.querySelectorAll(".slide");
+			let totalWidth = 0;
+
+			slides.forEach(slide => {
+				totalWidth += slide.offsetWidth + 30; // gap 30px
+			});
+
+			// CSS変数に代入（半分の幅だけ動かす）
+			slider.style.setProperty("--move", `-${totalWidth / 2}px`);
+			slider.style.setProperty("--duration", `${totalWidth / 50}s`);
+		});
+	</script>
 
 
 
