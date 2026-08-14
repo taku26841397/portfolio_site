@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Project List｜Development Archive</title>
+	<title>All Works｜Development Archive</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/all_works.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -13,6 +13,7 @@
 	<meta name="description" content="Development Project">
 	<meta name="viewport" content="width=device-width">
 	<script src="js/all_works.js" defer></script>
+	<script src="js/common.js" defer></script>
 </head>
 
 <body>
@@ -27,15 +28,16 @@
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="skill.html">Skills</a></li>
-						<li><a class="now" href="project.html">Project</a></li>
+						<li><a class="now" href="all_works.html">All Works</a></li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</div>
-				<a class="cta-btn" href="contact.html">Get Proposal</a>
+				<!-- <a class="cta-btn" href="contact.html">Get Proposal</a> -->
 			</nav>
 		</div>
 	</header>
 	<main>
+		<div id="loader" class="loader"><img src="image/loading.webp" alt=""></div>
 		<div class="title">
 			<h2>ALL WORKS</h2>
 		</div>
@@ -48,16 +50,41 @@
 		</div>
 
 		<div class="project-list">
-			<div class="project-item" data-category="django">
-				<img src="image/info_ryokan.jpg" alt="">
-			</div>
-
-			<div class="project-item" data-category="react">
-				<img src="image/hondana_picture.jpg" alt="">
-			</div>
-
 			<div class="project-item" data-category="htmlcss">
-				<img src="image/htmlcss_project.png" alt="">
+				<a href="/project/htmlcss/ryokan/index.html">
+					<img src="image/info_ryokan.jpg" alt="">
+					<p class="project-title">旅館サイト</p>
+				</a>
+			</div>
+			<div class="project-item" data-category="django">
+				<a href="/project/django/hondana/index.html">
+					<img src="image/hondana_picture.jpg" alt="">
+					<p class="project-title">本棚アプリ</p>
+				</a>
+			</div>
+			<div class="project-item" data-category="htmlcss">
+				<a href="/project/htmlcss/cafe/index.html">
+					<img src="image/coffee_shop.jpg" alt="">
+					<p class="project-title">Cafeサイト</p>
+				</a>
+			</div>
+			<div class="project-item" data-category="react">
+				<a href="">
+					<img src="image/memo_picture.png" alt="">
+					<p class="project-title">Coming soon</p>
+				</a>
+			</div>
+			<div class="project-item" data-category="django">
+				<a href="/project/django/todo/index.html">
+					<img src="image/todo.jpg" alt="">
+					<p class="project-title">Todoアプリ</p>
+				</a>
+			</div>
+			<div class="project-item" data-category="django">
+				<a href="/project/htmlcss/ryokan/index.html">
+					<img src="image/snippet_picture.png" alt="">
+					<p class="project-title">スニペットアプリ</p>
+				</a>
 			</div>
 		</div>
 	</main>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>本棚アプリ（Django）｜Development Archive</title>
+
+
+    <!-- head.html の内容を直接書く -->
+    <link rel="stylesheet" href="../../../css/reset.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/all_works.css">
+    <link rel="stylesheet" href="../../css/common.css">
+
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+
+    <script src="../../../js/all_works.js" defer></script>
+    <script src="../../js/include.js" defer></script>
+
+
+</head>
+
+<body>
+    <div data-include="../../base/header.html"></div>
+
+    <main>
+        <div class="project-info-block">
+            <p class="project-tech">Django</p>
+            <p class="project-name">Bookshelf App</p>
+        </div>
+        <div class="project-hero-wrap">
+            <div class="project-hero-overlay">
+                <a href="https://portfolio-crud-j2ow.onrender.com/" class="hero-btn" target="_blank">Visit Site</a>
+                <a href="https://github.com/taku26841397/portfolio_crud" class=" hero-btn" target="_blank">GitHub</a>
+            </div>
+            <div class="test_user">
+                <strong>Test User (for login)</strong><br>
+                Username: <strong>testuser</strong><br>
+                Password: <strong>testpass123</strong>
+            </div>
+
+
+            <div class="project-image-frame">
+                <div class="project-hero-images">
+                    <img src="image/top1.jpg" alt="">
+                    <img src="image/top2.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="project-detail">
+
+
+
+            <section class="project-section">
+                <h3>Overview</h3>
+                <p>
+                    書籍の登録・編集・削除ができるCRUDアプリです。 DjangoのModel、View、Templateを用いて、 Webアプリケーションの基本的な構造を学ぶ目的で制作しました。
+                </p>
+            </section>
+
+            <section class="project-section">
+                <h3>Tech Stack</h3>
+                <ul class="tech-list">
+                    <li>Python / Django</li>
+                    <li>SQLite（ローカル開発）</li>
+                    <li>Bootstrap（UI）</li>
+                    <li>Render（デプロイ）</li>
+                </ul>
+            </section>
+
+            <section class="project-section">
+                <h3>Features</h3>
+                <ul class="feature-list">
+                    <li>CRUD Operations — Add, edit, delete, and view books</li>
+                    <li>User Authentication — Login and logout system</li>
+                    <li>Category Management — Organize books by genre</li>
+                    <li>Responsive Design — Mobile-friendly layout</li>
+                    <li>Django Admin — Manage book data from the admin panel</li>
+                </ul>
+            </section>
+
+            <section class="project-section">
+                <h3>Key Points</h3>
+                <p>
+                    このアプリでは、Django の クラスベースビュー（CBV） を活用し、コードの簡潔さと拡張性を重視した設計を行いました。
+                    また、LoginRequiredMixin を用いることで、認証済みユーザーのみが本棚を操作できるようにし、セキュリティを確保しています。<br><br>
+
+                    本番環境では Render へのデプロイ を行い、実際の運用を想定した動作確認を実施しました。
+                    さらに、企業がすぐに動作を試せるよう、本番DBに testuser を作成し、ログインできる状態を整えています。
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- 共通フッター -->
+    <div data-include="../../base/footer.html"></div>
+
+</body>
+
+</html>

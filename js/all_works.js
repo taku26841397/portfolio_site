@@ -12,9 +12,9 @@ buttons.forEach(btn => {
         // 作品フィルタリング
         items.forEach(item => {
             if (filter === "all" || item.dataset.category === filter) {
-                item.style.display = "block";
+                item.classList.remove("hide");
             } else {
-                item.style.display = "none";
+                item.classList.add("hide");
             }
         });
     });

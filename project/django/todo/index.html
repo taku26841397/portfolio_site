@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Todo App｜Development Archive</title>
+
+
+    <!-- head.html の内容を直接書く -->
+    <link rel="stylesheet" href="../../../css/reset.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/all_works.css">
+    <link rel="stylesheet" href="../../css/common.css">
+
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+
+    <script src="../../../js/all_works.js" defer></script>
+    <script src="../../js/include.js" defer></script>
+
+
+</head>
+
+<body>
+    <div data-include="../../base/header.html"></div>
+
+    <main>
+        <div class="project-info-block">
+            <p class="project-tech">Django</p>
+            <p class="project-name">Todo App</p>
+        </div>
+        <div class="project-hero-wrap">
+            <div class="project-hero-overlay">
+                <a href="https://todo-1lnw.onrender.com/" class="hero-btn" target="_blank">Visit App</a>
+                <a href="https://github.com/taku26841397/portfolio_django_todo" class=" hero-btn"
+                    target="_blank">GitHub</a>
+            </div>
+            <div class="test_user">
+                <strong>Test User (for login)</strong><br>
+                Username: <strong>testuser</strong><br>
+                Password: <strong>testpass123</strong>
+            </div>
+
+
+            <div class="project-image-frame">
+                <div class="project-hero-images">
+                    <img src="image/top1.webp" alt="">
+                    <img src="image/top2.webp" alt="">
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="project-detail">
+
+
+
+            <section class="project-section">
+                <h3>Overview</h3>
+                <p>
+                    タスクの登録・編集・削除ができる CRUD アプリです。<br>
+                    ログイン機能を備え、認証済みユーザーのみが Todo を操作できるようにしています。<br>
+                    また、matplotlib を使用したタスク統計ページも実装しています。
+                </p>
+            </section>
+
+            <section class="project-section">
+                <h3>Tech Stack</h3>
+                <ul class="tech-list">
+                    <li>Python / Django</li>
+                    <li>SQLite（ローカル開発）</li>
+                    <li>matplotlib（統計グラフ）</li>
+                    <li>HTML / CSS / JS</li>
+                    <li>Render（デプロイ）</li>
+                </ul>
+            </section>
+
+            <section class="project-section">
+                <h3>Features</h3>
+                <ul class="feature-list">
+                    <li>Todo管理 — タスクの登録・編集・削除、ページネーション付き一覧、詳細表示</li>
+                    <li>認証機能 — ログイン／ログアウト、アクセス制御</li>
+                    <li>統計ページ — 完了率・作成推移をグラフ化（matplotlib）</li>
+                    <li>UIデザイン — シンプルなレイアウト、色分けで視認性向上、直感的なCRUD</li>
+                    <li>技術的ポイント — Django CBV、LoginRequiredMixin、サーバー側グラフ生成、Renderデプロイ</li>
+                </ul>
+            </section>
+
+            <section class="project-section">
+                <h3>Key Points</h3>
+                <p>
+                    タスクの完了状態を色分けし、直感的に操作できる UI を意識しました。
+                    統計ページでは matplotlib によるグラフ生成で、タスクの傾向を視覚的に把握できます。
+                    また、Render へデプロイし、testuser を用意することで、すぐに動作確認できるよう配慮しています。
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- 共通フッター -->
+    <div data-include="../../base/footer.html"></div>
+
+</body>
+
+</html>

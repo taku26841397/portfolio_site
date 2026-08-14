@@ -10,6 +10,7 @@
 	<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
 	<meta name="description" content="Development Archive">
 	<meta name="viewport" content="width=device-width">
+	<script src="js/common.js" defer></script>
 </head>
 
 <body>
@@ -24,16 +25,19 @@
 					<ul>
 						<li><a class="now" href="index.html">Home</a></li>
 						<li><a href="skill.html">Skills</a></li>
-						<li><a href="project.html">Project</a></li>
+						<li><a href="all_works.html">All Works</a></li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
 
 				</div>
-				<a class="cta-btn" href="contact.html">Get Proposal</a>
+				<!-- <a class="cta-btn" href="contact.html">Get Proposal</a> -->
 			</nav>
 		</div>
 	</header>
 	<main>
+		<div id="loader" class="loader"><img src="image/loading.webp" alt=""></div>
+
+
 		<div id="mainvisual">
 			<h2 id="titleText">
 				<span class="line">Development</span>
@@ -59,7 +63,7 @@
 					長く使われるプロダクトを意識した開発を目指しています。
 				</p>
 
-				<a class="readmore-btn" href="skill.html">Read More →</a>
+				<a class="more-btn" href="skill.html">READ MORE →</a>
 
 				<!-- <h2>経歴</h2> -->
 				<h2 id="career-title"></h2>
@@ -151,7 +155,11 @@
 						<!-- 作品を増やす場合はこのブロックを複製 -->
 					</div>
 				</div>
+
 			</section>
+			<div class="view-more">
+				<a class="more-btn" href="all_works.html">VIEW MORE →</a>
+			</div>
 
 
 
@@ -226,6 +234,14 @@
 	</footer>
 	<script>
 
+		const loader = document.getElementById("loader");
+
+		// ページ読み込み時にロード画面を表示 → 少し遅れて消す
+		window.addEventListener("load", () => {
+			setTimeout(() => {
+				loader.classList.add("hide");
+			}, 800); // 0.8秒後にフェードアウト
+		});
 
 
 
@@ -438,7 +454,7 @@
 
 
 
-	</script>
+
 
 </body>
 

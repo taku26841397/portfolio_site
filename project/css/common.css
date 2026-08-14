@@ -1,0 +1,126 @@
+main {
+    margin: auto 140px;
+    padding-top: 200px;
+}
+
+.project-info-block {
+    margin-bottom: 30px;
+    color: #305662;
+    margin-bottom: 72px;
+    /* あなたのサイトの落ち着いた青緑 */
+}
+
+.project-tech {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    opacity: 0.8;
+}
+
+.project-name {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.project-detail {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 120px 20px 80px;
+    /* ヘッダー固定分 + 余白 */
+}
+
+.project-title-main {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #305662;
+}
+
+.project-hero img {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.project-section {
+    margin-bottom: 40px;
+}
+
+.project-section h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #305662;
+}
+
+.tech-list,
+.feature-list {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+
+
+
+/* 画像を包む薄いグレーのボックス */
+.project-image-frame {
+    background-color: #f5f5f5;
+    /* 薄いグレー */
+    padding: 40px;
+    margin-bottom: 60px;
+
+}
+
+/* 画像2枚を縦に並べる */
+.project-hero-images {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 48px auto;
+}
+
+/* ボックス内の画像 */
+.project-hero-images img {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 48px;
+    object-fit: cover;
+    /* box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08),
+        0 0 25px rgba(0, 0, 0, 0.04); */
+
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.30);
+}
+
+
+/* 写真の上にリンクを重ねる */
+.project-hero-wrap {
+    position: relative;
+    margin-bottom: 40px;
+    padding-top: px;
+}
+
+.project-hero-overlay {
+    /* position: absolute;
+    top: 20px;
+    left: 20px; */
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+    margin-bottom: 24px;
+}
+
+/* Visit Site / GitHub ボタン */
+.hero-btn {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 8px 14px;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.hero-btn:hover {
+    opacity: 0.7;
+    transform: translateY(-2px);
+}
