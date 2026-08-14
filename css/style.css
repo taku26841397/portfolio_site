@@ -1044,7 +1044,7 @@ article ul {
 @media (max-width: 959px) {
 
   #mainvisual h2 {
-    font-size: 64px;
+    font-size: 63px;
   }
 
   #subtitle {
@@ -1274,6 +1274,12 @@ article ul {
 
   #event img {
     width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  #mainvisual h2 {
+    font-size: 57px;
   }
 }
 
