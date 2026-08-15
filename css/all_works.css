@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 main {
-    margin: auto 120px 120px;
+    margin: auto 150px 120px;
 }
 
 /* * {
@@ -44,7 +44,7 @@ main {
 .project-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 70px;
+    gap: 80px;
     margin-top: 40px;
     justify-content: start;
 }
