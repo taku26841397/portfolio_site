@@ -319,16 +319,19 @@ main {
   font-weight: 500;
   letter-spacing: 0.05em;
   text-shadow: 2px 2px 5px #ffffff;
-  line-height: 180%;
+  /* line-height: 180%; */
   text-align: center;
-  padding-top: 65px;
-  height: 500px;
+  /* padding-top: 65px; */
+  height: 100vh;
   background-position: center top;
   background-size: cover;
   background-attachment: fixed;
   max-width: 1500px;
   margin: 0 auto;
-  background-image: url(../image/top_3.webp);
+  background-image: url(../image/top3.webp);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #mainvisual_project {

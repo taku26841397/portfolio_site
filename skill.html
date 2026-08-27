@@ -6,6 +6,7 @@
 	<title>Skills｜Development Archive</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/skill.css">
 	<link rel="icon" href="favicon.ico">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
 	<meta name="description" content="Development Skill Set">
@@ -40,9 +41,46 @@
 	<main>
 		<div id="loader" class="loader"><img src="image/loading.webp" alt=""></div>
 		<div id="mainvisual_skill">
-			<h2>Development<br>Skill Set</h2>
+			<h2>Skills</h2>
 		</div>
-		<article>
+		<section class="skill-wrap">
+			<div class="skill-card">
+				<h3>Coding Languages</h3>
+				<ul>
+					<li>JavaScript</li>
+					<li>HTML / CSS</li>
+					<li>Python</li>
+				</ul>
+			</div>
+
+			<div class="skill-card">
+				<h3>Tools & Platforms</h3>
+				<ul>
+					<li>Git / GitHub</li>
+					<li>Cloudflare Pages</li>
+					<li>VS Code</li>
+					<li>Miniconda</li>
+					<li>Foundry</li>
+				</ul>
+			</div>
+
+			<div class="skill-card">
+				<h3>Databases</h3>
+				<ul>
+					<li>PostgreSQL</li>
+					<li>SQLite</li>
+				</ul>
+			</div>
+
+			<div class="skill-card">
+				<h3>Other Skills</h3>
+				<ul>
+					<li>AIツール活用</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- <article>
 			<h2 id="program">Programming Languages</h2>
 			<ul>
 				<li>JavaScript（静的サイトの動的処理）</li>
@@ -70,7 +108,7 @@
 				<li>AIツール活用（コード補助・設計補助）</li>
 
 			</ul>
-		</article>
+		</article> -->
 		<a id="pagetop" href="#">
 			<div id="pagetop_inner"></div>
 		</a>
@@ -86,6 +124,26 @@
 			<p id="copyright"><small>&copy; 2026 Development Archive</small></p>
 		</div>
 	</footer>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const cards = document.querySelectorAll(".skill-card");
+
+			const observer = new IntersectionObserver(entries => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("show");
+					}
+				});
+			}, {
+				threshold: 0.2
+			});
+
+			cards.forEach(card => observer.observe(card));
+		});
+
+
+
+	</script>
 </body>
 
 </html>
