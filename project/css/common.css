@@ -1,3 +1,7 @@
+body {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
 main {
     margin: auto 140px;
     padding-top: 200px;
@@ -48,14 +52,27 @@ main {
 
 .project-section h3 {
     font-size: 20px;
-    margin-bottom: 12px;
-    color: #305662;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    text-align: left;
+    margin-bottom: 24px;
+    color: #333;
+}
+
+.project-section p {
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
 }
 
 .tech-list,
 .feature-list {
     padding-left: 20px;
     line-height: 1.8;
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
 }
 
 
@@ -118,6 +135,18 @@ main {
     font-size: 12px;
     letter-spacing: 0.5px;
     transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.hero-btn.disabled {
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.35);
+
+    color: #ccc;
+
+    opacity: 0.6;
+    transform: none;
+    /* ホバーの浮き上がりを無効化 */
+    cursor: default;
 }
 
 .hero-btn:hover {

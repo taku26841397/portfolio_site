@@ -11,24 +11,28 @@ buttons.forEach(btn => {
 
         // 作品フィルタリング
         items.forEach(item => {
-            if (filter === "all" || item.dataset.category === filter) {
+            const categories = item.dataset.category.split(" ");
+            if (filter === "all" || categories.includes(filter)) {
                 item.classList.remove("hide");
             } else {
                 item.classList.add("hide");
             }
         });
+
     });
 });
 
 function filterProjects(filter) {
     document.querySelectorAll('.project-item').forEach(item => {
-        if (filter === 'all' || item.dataset.category === filter) {
+        const categories = item.dataset.category.split(" ");
+        if (filter === 'all' || categories.includes(filter)) {
             item.classList.remove('hide');
         } else {
             item.classList.add('hide');
         }
     });
 }
+
 
 
 document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -51,21 +55,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 });
 
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     const params = new URLSearchParams(window.location.search);
-//     const category = params.get("category");
 
-//     if (category) {
-//         filterProjects(category);
-
-//         document.querySelectorAll('.filter-btn').forEach(btn => {
-//             btn.classList.remove('now');
-//             if (btn.dataset.filter === category) {
-//                 btn.classList.add('now');
-//             }
-//         });
-//     }
-// });
 
 
 
