@@ -63,9 +63,12 @@
             <section class="project-section">
                 <h3>Overview</h3>
                 <p>
-                    タスクの登録・編集・削除ができる CRUD アプリです。<br>
-                    ログイン機能を備え、認証済みユーザーのみが Todo を操作できるようにしています。<br>
-                    また、matplotlib を使用したタスク統計ページも実装しています。
+                    コードスニペットをカテゴリ別に整理・検索・管理する Django アプリです。 Function-Based Views（FBV） を採用し、処理の流れを明確化しながら
+                    認証・カテゴリフィルタ・CRUD・本番環境デプロイまで一通り実装しています。
+
+                    本番環境は Render を使用し、Whitenoise による静的ファイル配信など 実運用を意識した構成にしています。
+
+
                 </p>
             </section>
 
@@ -73,27 +76,30 @@
                 <h3>Tech Stack</h3>
                 <ul class="tech-list">
                     <li>Python / Django</li>
-                    <li>SQLite（ローカル開発）</li>
-                    <li>HTML / CSS / JS</li>
-                    <li>Render（デプロイ）</li>
+                    <li>SQLite</li>
+                    <li>HTML / CSS / JavaScript</li>
+                    <li>Bootstrap 5</li>
+                    <li>Pillow（画像アップロード機能）</li>
+                    <li>Render</li>
+                    <li>Whitenoise</li>
                 </ul>
             </section>
 
             <section class="project-section">
                 <h3>Features</h3>
                 <ul class="feature-list">
-                    <li>Todo管理 — スニッペットの登録・編集・削除、検索機能、詳細表示</li>
-                    <li>カテゴリ分類 — 言語カテゴリ と サブカテゴリを分類</li>
-                    <li>認証機能 — ログイン／ログアウト、アクセス制御</li>
-                    <li>UIデザイン — シンプルなレイアウト、色分けで視認性向上、直感的なCRUD</li>
-                    <li>技術的ポイント — Django CBV、LoginRequiredMixin、サーバー側グラフ生成、Renderデプロイ</li>
+                    <li>スニペット管理 — コードの登録・編集・削除・検索</li>
+                    <li>プロンプト管理 — テキスト生成AI向けプロンプトの管理</li>
+                    <li>画像プロンプト管理 — 画像生成AI向けプロンプトの管理</li>
+                    <li>カテゴリ機能 — 言語・カテゴリ・サブカテゴリによる整理</li>
+                    <li>UIデザイン — シンプルで再利用しやすい情報管理画面</li>
                 </ul>
             </section>
 
             <section class="project-section">
                 <h3>Key Points</h3>
                 <p>
-                    Code Archive は、必要なコードをすぐ取り出せるように、余計な操作をできるだけ減らすことを意識して作られています。
+                    このアプリは、必要なコードをすぐ取り出せるように、余計な操作をできるだけ減らすことを意識して作られています。
                     画面構成はシンプルで、どこを開いても同じ感覚で扱えるように整えられており、使うたびに迷うことがありません。<br><br>
                     淡い色調と静かなデザインは、作業に集中したいときでも視線の負担を軽くしてくれます。
                     コードを探す時間が短くなることで、開発の流れが途切れず、自然と作業に入り込めるようになります。<br><br>
