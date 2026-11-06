@@ -35,7 +35,7 @@
         </div>
         <div class="project-hero-wrap">
             <div class="project-hero-overlay">
-                <a href="https://portfolio-snippets.onrender.com/" class="hero-btn" target="_blank">Visit App</a>
+                <a href="https://snippets.taku-archive.dev/" class="hero-btn" target="_blank">Visit App</a>
                 <a href="https://github.com/taku26841397/portfolio_snippets" class="hero-btn" target="_blank">GitHub</a>
             </div>
             <div class="test_user">
@@ -58,17 +58,17 @@
 
         <div class="project-detail">
 
-
-
             <section class="project-section">
                 <h3>Overview</h3>
                 <p>
-                    コードスニペットをカテゴリ別に整理・検索・管理する Django アプリです。 Function-Based Views（FBV） を採用し、処理の流れを明確化しながら
-                    認証・カテゴリフィルタ・CRUD・本番環境デプロイまで一通り実装しています。
+                    コードスニペット・テキストプロンプト・画像プロンプトをカテゴリ別に整理・検索・管理できる Django アプリです。
+                    Function-Based Views（FBV）を採用し、認証・カテゴリ管理・検索機能・CRUD機能を実装しています。<br><br>
 
-                    本番環境は Render を使用し、Whitenoise による静的ファイル配信など 実運用を意識した構成にしています。
+                    本番環境は Oracle Cloud Infrastructure（OCI）上に構築し、
+                    PostgreSQL・Gunicorn・Nginx・Let's Encrypt を利用した構成で運用しています。<br><br>
 
-
+                    Renderでの運用からOCIへの移行を行い、
+                    Linuxサーバー構築からHTTPS化までを自身で実装しました。
                 </p>
             </section>
 
@@ -76,12 +76,15 @@
                 <h3>Tech Stack</h3>
                 <ul class="tech-list">
                     <li>Python / Django</li>
-                    <li>SQLite</li>
+                    <li>PostgreSQL</li>
                     <li>HTML / CSS / JavaScript</li>
                     <li>Bootstrap 5</li>
                     <li>Pillow（画像アップロード機能）</li>
-                    <li>Render</li>
-                    <li>Whitenoise</li>
+                    <li>Oracle Cloud Infrastructure (OCI)</li>
+                    <li>Ubuntu</li>
+                    <li>Nginx</li>
+                    <li>Gunicorn</li>
+                    <li>Let's Encrypt</li>
                 </ul>
             </section>
 
@@ -91,19 +94,25 @@
                     <li>スニペット管理 — コードの登録・編集・削除・検索</li>
                     <li>プロンプト管理 — テキスト生成AI向けプロンプトの管理</li>
                     <li>画像プロンプト管理 — 画像生成AI向けプロンプトの管理</li>
+                    <li>画像アップロード機能 — ImagePromptへの画像登録・管理</li>
                     <li>カテゴリ機能 — 言語・カテゴリ・サブカテゴリによる整理</li>
-                    <li>UIデザイン — シンプルで再利用しやすい情報管理画面</li>
+                    <li>サイト内検索 — Snippet / Prompt / ImagePrompt 横断検索</li>
+                    <li>認証機能 — ログイン・ログアウト・アクセス制御</li>
                 </ul>
             </section>
 
             <section class="project-section">
                 <h3>Key Points</h3>
                 <p>
-                    このアプリは、必要なコードをすぐ取り出せるように、余計な操作をできるだけ減らすことを意識して作られています。
-                    画面構成はシンプルで、どこを開いても同じ感覚で扱えるように整えられており、使うたびに迷うことがありません。<br><br>
-                    淡い色調と静かなデザインは、作業に集中したいときでも視線の負担を軽くしてくれます。
-                    コードを探す時間が短くなることで、開発の流れが途切れず、自然と作業に入り込めるようになります。<br><br>
-                    軽量で安定した動作が、日々の開発を静かに支える小さな相棒のような存在になっています。
+                    クラスベースビューではなく Function-Based Views を採用し、
+                    リクエストからレスポンスまでの流れを把握しやすい構成としています。<br><br>
+
+                    本番環境では Oracle Cloud 上に Ubuntu サーバーを構築し、
+                    PostgreSQL・Gunicorn・Nginx を利用した構成で運用しています。<br><br>
+
+                    また、独自ドメインの設定・HTTPS化・Static/Media配信・
+                    Gunicornのsystemd自動起動設定まで実施し、
+                    アプリケーション開発だけでなくインフラ構築まで含めて経験しました。
                 </p>
             </section>
 
